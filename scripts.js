@@ -1,3 +1,5 @@
+function myCarousel (){
+
 var imgBox = document.getElementById('box');
 imgBox.classList.add('product--sale');
 var imgBoxList = imgBox.getElementsByTagName('img');
@@ -5,20 +7,24 @@ var imgBoxList = imgBox.getElementsByTagName('img');
 // создание обертки для картинок
 for (var i = 0; i < imgBoxList.length; i++) {
   var imgBoxItem = imgBoxList[i];
-  imgBoxItem.classList.add('privet_js');
   imgBoxItem.outerHTML = '<div class="carousel__item">' + imgBoxItem.outerHTML + '</div>';
   var imgWrap = imgBox.getElementsByTagName('div');
 }
 // присвоение ширины обертки в 1/4 предоставленного пространства
+var widthImg = 0;
+var heightImg = 0;
+
+
 for (var j = 0; j < imgWrap.length; j++) {
   imgWrap[j].style.width = 24 + '%';
-  imgWrap[j].style.paddingRight = 6 + 'px';
   imgWrap[j].style.float = 'left';
   // определение ширины картинки
-  var widthImg = imgWrap[j].offsetWidth;
+  widthImg = imgWrap[j].offsetWidth;
   // определение высоты картинки
-  var heightImg = imgWrap[j].offsetHeight;
-}
+  heightImg = imgWrap[j].offsetHeight;
+};
+
+
 // расположение картинок друг за другом вправо
 var imgPosition = 0;
 for (var j = 1; j < imgWrap.length; j++) {
@@ -42,3 +48,7 @@ function sliderLeft () {
   };
   imgList.style.left = imgLeft + 'px';
 }
+
+}
+
+myCarousel ();
