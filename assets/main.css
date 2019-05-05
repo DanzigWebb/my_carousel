@@ -1,0 +1,32 @@
+.carousel-wrapper {
+  max-width: 550px;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 99999px;
+}
+
+.carousel-wrapper {
+  max-width: 500px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-content {
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  right: 0;
+}
+
+.carousel-item {
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
